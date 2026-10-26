@@ -541,7 +541,6 @@ export default function UserHomePage() {
 
   return (
     <>
-      {/* Start Add Chat Modal */}
       <Dialog
         open={showAddChatDialog}
         onClose={handleAddChatClose}
@@ -579,7 +578,6 @@ export default function UserHomePage() {
           <Button onClick={handleAddChatConfirm}>Confirm</Button>
         </DialogActions>
       </Dialog>
-      {/* End Add Chat Modal */}
 
       <div
         className="homepage-container"

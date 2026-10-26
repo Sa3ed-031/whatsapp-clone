@@ -129,7 +129,8 @@ body {
 #root .homepage-container {
   width: 100%;
   height: 100%;
-  overflow-y: auto;
+  min-height: 0;
+  /* overflow-y: auto; */
   background-color: #111a3f;
 }
 
@@ -181,8 +182,9 @@ body {
 
 .homepage-container .content {
   margin-top: 2.9rem;
+  min-height: 0;
   height: 84.5%;
-  overflow-y: scroll;
+  overflow-y: auto;
   padding: 0;
 }
 

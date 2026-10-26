@@ -4,7 +4,7 @@ A WhatsApp-style chat app built with React and Material UI: private chats, group
 
 > **Note:** Portfolio project for learning purposes. Not affiliated with WhatsApp or Meta.
 
-[![Live Demo](https://img.shields.io/badge/Live%20Demo-Netlify-00C7B7?style=for-the-badge&logo=netlify&logoColor=white)](https://sa3ed-chatsapp-clone-project.netlify.app/)
+[![Live Demo](https://img.shields.io/badge/Live%20Demo-Netlify-00C7B7?style=for-the-badge&logo=netlify&logoColor=white)](https://sa3ed-chatsapp.netlify.app/)
 
 <img src="./public/preview.png" width="800" alt="WhatsApp UI Clone preview" />
 

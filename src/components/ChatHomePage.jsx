@@ -369,6 +369,7 @@ export default function ChatHomePage() {
         <main
           className="content"
           style={{
+            padding: "1rem",
             display: "flex",
             flexDirection: "column",
             marginTop: "3.5rem",
