@@ -32,22 +32,22 @@ All data lives under a single `users` key in Local Storage:
 
 ## 🛠️ Tech Stack
 
-| Technology | Purpose |
-| --- | --- |
-| [React 19](https://react.dev/) | UI library |
-| [Vite 7](https://vite.dev/) | Dev server and build tool |
-| [Material UI 7](https://mui.com/) + Emotion | Components and icons |
-| [React Router 7](https://reactrouter.com/) | Client-side routing |
-| [uuid](https://github.com/uuidjs/uuid) | Unique IDs for users, chats and messages |
-| Web Crypto API | Password hashing |
-| Local Storage | Data persistence |
-| ESLint | Linting |
+| Technology                                  | Purpose                                  |
+| ------------------------------------------- | ---------------------------------------- |
+| [React 19](https://react.dev/)              | UI library                               |
+| [Vite 7](https://vite.dev/)                 | Dev server and build tool                |
+| [Material UI 7](https://mui.com/) + Emotion | Components and icons                     |
+| [React Router 7](https://reactrouter.com/)  | Client-side routing                      |
+| [uuid](https://github.com/uuidjs/uuid)      | Unique IDs for users, chats and messages |
+| Web Crypto API                              | Password hashing                         |
+| Local Storage                               | Data persistence                         |
+| ESLint                                      | Linting                                  |
 
 ## 🚀 Getting Started
 
 ```bash
-git clone https://github.com/Sa3ed-031/<repo-name>.git
-cd <repo-name>
+git clone https://github.com/Sa3ed-031/whatsapp-clone.git
+cd whatsapp-clone
 npm install
 npm run dev
 ```
@@ -57,11 +57,11 @@ Then open the URL Vite prints, usually http://localhost:5173.
 **Demo accounts** (seeded on first visit; enter any phone number with 5+ digits first):
 
 | Username | Password |
-| --- | --- |
-| Ahmad | ahmad123 |
-| Lina | lina123 |
-| Omar | omar123 |
-| Sara | sara123 |
+| -------- | -------- |
+| Ahmad    | ahmad123 |
+| Lina     | lina123  |
+| Omar     | omar123  |
+| Sara     | sara123  |
 
 To try messaging, log in as one user, add a chat using another demo user's name and number (e.g. `Lina` / `0933000002`), send a message, then log in as that user to see it arrive.
 
