@@ -1,0 +1,1346 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Open Sans", sans-serif;
+}
+
+body {
+  height: 100vh;
+  height: 100dvh;
+  background-color: #0b1029;
+}
+
+/*
+  The app is a phone-sized column centered on wider screens.
+  `transform` makes #root the containing block for the fixed headers/footers,
+  so they stay inside the column instead of stretching across the viewport.
+*/
+#root {
+  width: 100%;
+  max-width: 480px;
+  height: 100%;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  position: relative;
+  transform: translateZ(0);
+  overflow-y: auto;
+  background-color: #191f37;
+}
+
+@media (min-width: 481px) {
+  #root {
+    box-shadow: 0 0 40px rgba(0, 0, 0, 0.5);
+  }
+}
+
+.disclaimer {
+  max-width: 26rem;
+  margin: 0 auto;
+  padding: 0.5rem 1rem;
+  font-size: 0.75rem;
+  line-height: 1.4;
+  text-align: center;
+  color: rgba(255, 255, 255, 0.6);
+}
+
+
+/* Start Login / Register Card */
+.card .card-hero {
+  height: 150px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #151f48 0%, #0e3b2e 100%);
+}
+
+.card .inputs .MuiInputLabel-root {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.card .inputs .MuiInputLabel-root.Mui-focused {
+  color: limegreen;
+}
+
+.card .inputs .MuiOutlinedInput-root {
+  color: white;
+  background-color: #191f37;
+}
+
+.card .inputs .MuiOutlinedInput-root .MuiOutlinedInput-notchedOutline {
+  border-color: #444c6b;
+}
+
+.card .inputs .MuiOutlinedInput-root:hover .MuiOutlinedInput-notchedOutline {
+  border-color: #6b7499;
+}
+
+.card .inputs .MuiOutlinedInput-root.Mui-focused .MuiOutlinedInput-notchedOutline {
+  border-color: limegreen;
+}
+
+.card .inputs .MuiIconButton-root {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.card .card-actions {
+  display: flex;
+  justify-content: center;
+}
+
+.card .inputs {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.card .inputs .text-input,
+.card .inputs .password-input,
+.card .inputs .confirm-password-input {
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.card .inputs .submit-button {
+  width: 40%;
+  padding: 0.6rem 0.1rem;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  margin-bottom: 0.5rem;
+  font-weight: bold;
+  color: #111a3f;
+  background-color: limegreen;
+}
+
+.disabled {
+  background-color: gray !important;
+}
+
+
+
+/* Start Homepage */
+.icon {
+  color: white;
+}
+
+#root .homepage-container {
+  width: 100%;
+  height: 100%;
+  overflow-y: auto;
+  background-color: #111a3f;
+}
+
+.homepage-container header {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid #31374f;
+  background-color: #111a3f;
+}
+
+.homepage-container header .logo {
+  font-weight: bold;
+  padding: 10px;
+}
+
+.homepage-container header nav .icon-btn {
+  border: none;
+  outline: none;
+}
+
+.homepage-container header nav .nav {
+  flex-direction: column;
+  list-style: none;
+  position: absolute;
+  top: 100%;
+  right: 0;
+  z-index: 2000000000000000000000000000;
+  border-radius: 8px;
+  font-weight: bold;
+  width: 9rem;
+  gap: 1rem;
+  background-color: #151f48;
+}
+
+.homepage-container header nav ul.nav li {
+  padding: 0.6rem 0.5rem;
+  width: 100%;
+  cursor: pointer;
+}
+
+.homepage-container header nav .nav li:hover {
+  background-color: #444c6b;
+}
+
+.homepage-container .content {
+  margin-top: 2.9rem;
+  height: 84.5%;
+  overflow-y: scroll;
+  padding: 0;
+}
+
+
+.homepage-container .content .search-input {
+  width: 100%;
+  margin: 0.5rem 0;
+  display: flex;
+  align-items: center;
+  /* position: static; */
+}
+
+.homepage-container .content .search-input .input-base {
+  width: 99%;
+  margin: auto;
+  margin-left: -2rem;
+  border-radius: 2rem;
+  padding: 0.5rem 0 0.5rem 3rem;
+  position: static;
+  color: rgb(255, 237, 237);
+  background-color: #31374f;
+}
+
+.homepage-container .content .search-input .icon-btn {
+  left: 1.5rem;
+  outline: none;
+}
+
+.homepage-container .content .search-input .icon-btn .icon {
+  color: grey;
+}
+
+.homepage-container .content .toggle-btn-group {
+  margin-top: 1rem;
+  display: flex;
+  justify-content: space-around;
+}
+
+.homepage-container .content .toggle-btn-group .toggle-btn-choice {
+  color: rgb(205, 205, 205);
+  text-transform: capitalize;
+  border-radius: 30px;
+  padding: 0.5rem 1rem;
+  border: none;
+  outline: none;
+}
+
+.homepage-container .content .toggle-btn-group .toggle-btn-choice:hover {
+  border: none;
+  outline: none;
+}
+
+.homepage-container .content .conversations {
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+  margin-top: 1rem;
+}
+
+.homepage-container .content .conversations .chat-container:hover {
+  cursor: pointer;
+  background-color: #444c6b;
+}
+
+.homepage-container footer {
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: transparent;
+}
+
+.homepage-container .plus-icon {
+  width: 100%;
+  display: flex;
+  justify-content: end;
+  position: absolute;
+  bottom: 20%;
+  margin-bottom: 0.5rem;
+  background-color: #191f37;
+}
+
+.homepage-container .plus-icon .icon-btn {
+  border: none;
+  outline: none;
+  padding: 1rem;
+  border-radius: 20px;
+  background-color: rgba(0, 255, 0, 0.95);
+  border: 1px solid #31374f;
+  position: absolute;
+  z-index: 100;
+}
+
+.homepage-container .plus-icon .icon-btn .icon {
+  color: #191f37;
+}
+
+.homepage-container footer .settings-bar {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  border-top: 3px solid #31374f;
+}
+
+.homepage-container footer .settings-bar .choice-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  cursor: pointer;
+  text-align: center;
+}
+
+.homepage-container footer .settings-bar .choice-container .settings-toggle-btn-choice {
+  border-radius: 20px;
+  padding: 0 0.5rem;
+  /* width: 50px; */
+  width: fit-content;
+  margin-left: auto;
+  margin-right: auto;
+  border: none;
+  outline: none;
+}
+
+.homepage-container footer .settings-bar .footer-icon-btn {
+  display: flex;
+  padding: 8px;
+  color: white;
+}
+
+
+/* Media for Fixing the Chat Photo & Body */
+@media(max-width: 484px) {
+  .homepage-container .content .conversations .chat-container {
+    width: 100%;
+    justify-content: flex-start;
+    gap: 0.3rem;
+  }
+
+  .homepage-container .content .conversations .chat-container .chat-body {
+    margin-right: -1.2rem;
+  }
+
+}
+
+@media(max-width:332px) {}
+
+
+/* Start Settings Page */
+#root .settings-page {
+  /* background-color: #090b0f; */
+  background-color: #111a3f;
+}
+
+#root .settings-page header {
+  z-index: 1;
+  background-color: #111a3f;
+}
+
+#root .settings-page p {
+  color: rgba(255, 253, 253, 0.538);
+}
+
+#root .settings-page header .go-back-and-icon {
+  display: flex;
+  align-items: center;
+}
+
+#root .settings-page header .icon-btn {
+  outline: none;
+}
+
+#root .settings-page .info {
+  width: 100%;
+  padding: 1rem;
+  margin-top: 2.5rem;
+  display: flex;
+  justify-content: space-between;
+  cursor: pointer;
+  border-bottom: 1px solid #31374f;
+}
+
+#root .settings-page .info:active,
+#root .settings-page .aside .settings .setting:active {
+  background-color: #444c6b;
+}
+
+#root .settings-page .info .left {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+#root .settings-page .info .left .profile img {
+  width: 4rem;
+  border-radius: 50%;
+}
+
+#root .settings-page .info .right {
+  display: flex;
+  gap: 1rem;
+}
+
+#root .settings-page .info .right .icon-btn {
+  outline: none;
+}
+
+#root .settings-page .info .right .icon-btn .icon {
+  color: rgba(0, 255, 0, 0.7);
+}
+
+#root .settings-page .aside {
+  padding: 0.3rem 0;
+  background-color: #111a3f;
+}
+
+#root .settings-page .aside .settings {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding: 0 0 1rem;
+}
+
+#root .settings-page .aside .settings .setting {
+  cursor: pointer;
+  padding: 0.3rem 1rem;
+  display: flex;
+  align-items: center;
+  border-radius: 0.2rem;
+  gap: 1rem;
+}
+
+#root .settings-page .aside .icon-btn {
+  outline: none;
+  pointer-events: none;
+}
+
+#root .settings-page .aside .icon-btn .icon {
+  color: rgba(255, 253, 253, 0.538);
+}
+
+
+/* Start Profile Page */
+#root .profile-page header {
+  position: initial;
+}
+
+#root .profile-page .icon,
+#root .profile-page p {
+  color: rgb(188, 183, 183);
+}
+
+#root .profile-page .user-info {
+  display: flex;
+  flex-direction: column;
+  margin-top: 1rem;
+}
+
+#root .profile-page .user-info .profile {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#root .profile-page .user-info .profile img {
+  width: 10rem;
+  height: 10rem;
+  border-radius: 50%;
+}
+
+#root .profile-page .user-info .profile label {
+  font-size: 1.3rem;
+  margin: 0.5rem 0 0;
+  cursor: pointer;
+  position: relative;
+  color: rgba(0, 255, 0, 0.7);
+}
+
+#root .profile-page .user-info .profile #user-profile-img {
+  width: 1.5rem;
+  position: absolute;
+  top: 20%;
+  left: 20%;
+  bottom: 25%;
+  visibility: hidden;
+}
+
+#root .profile-page .bio {
+  display: flex;
+  gap: 0.2rem;
+  flex-direction: column;
+}
+
+#root .profile-page .bio .cont {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  gap: 1rem;
+  padding: 0.7rem;
+}
+
+#root .profile-page .bio .cont:active {
+  background-color: #444c6b;
+}
+
+#root .profile-page .bio .cont div {
+  display: flex;
+  flex-direction: column;
+}
+
+
+/* Start Edit User Info Page */
+#root .edit-user-info header {
+  position: inherit;
+}
+
+#root .edit-user-info p,
+#root .edit-user-info .icon,
+#root .edit-user-info .user-info .edit-user-info-input label,
+#root .edit-user-info .user-info .edit-user-info-input input {
+  color: rgb(188, 183, 183);
+}
+
+#root .edit-user-info .user-info {
+  display: flex;
+  flex-direction: column;
+  margin-top: 1rem;
+  position: relative;
+}
+
+#root .edit-user-info .user-info .edit-user-info-input {
+  width: 90%;
+  margin: auto;
+}
+
+#root .edit-user-info .user-info .edit-user-info-input fieldset {
+  border-color: rgba(0, 255, 0, 0.95);
+}
+
+#root .edit-user-info .user-info .icon-btn {
+  outline: none;
+  position: absolute;
+  top: 8%;
+  right: 7%;
+}
+
+#root .edit-user-info .user-info p {
+  padding: 1rem;
+}
+
+#root .edit-user-info footer button {
+  width: 80%;
+  margin-bottom: 0.8rem;
+  outline: none;
+  color: #090b0f;
+  background-color: rgba(0, 255, 0, 0.9);
+}
+
+/* Start Add Group Page */
+#root .add-group-page header {
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: start;
+}
+
+#root .add-group-page header .go-back-and-icon {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid #31374f;
+}
+
+#root .add-group-page header .search-input {
+  width: 100%;
+  margin: 0.5rem 0;
+  display: flex;
+  align-items: center;
+  color: grey;
+}
+
+#root .add-group-page header .search-input .search {
+  position: absolute;
+  left: 3%;
+  z-index: 1;
+}
+
+#root .add-group-page header .search-input .search .icon {
+  color: grey;
+}
+
+#root .add-group-page header .search-input .input-base {
+  width: 95%;
+  margin: auto;
+  border-radius: 2rem;
+  padding: 0.5rem 0 0.5rem 2.5rem;
+  position: relative;
+  color: rgb(255, 237, 237);
+  background-color: #31374f;
+}
+
+#root .add-group-page header .search-input .apps {
+  position: absolute;
+  right: 3%;
+  z-index: 1;
+}
+
+#root .add-group-page p {
+  color: rgba(255, 253, 253, 0.538);
+}
+
+#root .add-group-page header .icon-btn {
+  outline: none;
+}
+
+#root .add-group-page .aside {
+  padding: 0.5rem;
+  margin-top: 7rem;
+}
+
+#root .add-group-page .aside .chats {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding: 1rem;
+}
+
+#root .add-group-page .aside .chats .chat {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  border-radius: 0.3rem;
+  box-shadow: 3px 3px 15px rgba(0, 255, 0, 0.25);
+}
+
+#root .add-group-page .aside .chats .chat .input-body {
+  width: 100%;
+  cursor: pointer;
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+#root .add-group-page .aside .chats .chat input:checked+svg {
+  color: rgba(0, 255, 0, 0.7);
+}
+
+#root .add-group-page .aside .chats .chat img {
+  width: 4.4rem;
+  border-radius: 50%;
+}
+
+#root .add-group-page footer {
+  position: fixed;
+}
+
+#root .add-group-page footer .plus-icon {
+  width: 100%;
+  display: flex;
+  justify-content: end;
+  position: absolute;
+  right: 1rem;
+  bottom: 4rem;
+  margin-bottom: 0.5rem;
+  background-color: #191f37;
+}
+
+#root .add-group-page footer .plus-icon .icon-btn {
+  border: none;
+  outline: none;
+  padding: 1rem;
+  border-radius: 20px;
+  background-color: rgba(0, 255, 0, 0.7);
+  border: 1px solid #31374f;
+  position: absolute;
+  z-index: 100;
+}
+
+
+/* Start Confirm Add Group Page */
+#root .add-group-page.confirm {
+  background-color: #090b0f8b;
+}
+
+#root .add-group-page.confirm header {
+  position: sticky;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+
+#root .add-group-page.confirm .icon-btn {
+  outline: none;
+}
+
+#root .add-group-page.confirm .aside {
+  margin: 0;
+  padding: 0;
+  background-color: transparent;
+}
+
+#root .add-group-page.confirm .aside .icon {
+  color: rgb(213, 210, 210);
+}
+
+#root .add-group-page.confirm .aside .group-info {
+  padding: 0.5rem;
+  display: flex;
+  justify-content: space-between;
+  background-color: #111a3f;
+}
+
+#root .add-group-page.confirm .aside .group-settings .group-setting {
+  cursor: pointer;
+}
+
+#root .add-group-page .aside .chats .chat:active,
+#root .add-group-page.confirm .aside .group-settings .group-setting:active {
+  background-color: #151f48;
+}
+
+
+/* Start Group Profile */
+#root .add-group-page.confirm .aside .group-info .group-profile {
+  width: 3.5rem;
+  height: 3.5rem;
+  display: flex;
+  cursor: pointer;
+  flex-direction: column;
+  background-color: #444c6b;
+}
+
+#root .add-group-page.confirm .aside .group-info .group-profile .icon {
+  color: gainsboro;
+  /* position: relative; */
+}
+
+#root .add-group-page.confirm .aside .group-info .group-profile img {
+  width: 3.5rem;
+  position: absolute;
+  border-radius: 50%;
+}
+
+#root .add-group-page.confirm .aside .group-info .group-profile label {
+  width: 99%;
+  height: 99%;
+  position: absolute;
+  cursor: pointer;
+  border-radius: 50%;
+}
+
+#root .add-group-page.confirm .aside .group-info .group-profile label #group-profile-input {
+  position: absolute;
+  top: 20%;
+  left: 0;
+  width: 100%;
+  border-radius: 8px;
+  visibility: hidden;
+}
+
+/* End Group Profile */
+
+
+#root .add-group-page.confirm .aside .group-info .group-name input {
+  color: grey;
+}
+
+#root .add-group-page.confirm .aside .group-settings {
+  margin-top: 0.5rem;
+  background-color: #111a3f;
+}
+
+#root .add-group-page.confirm .aside .group-settings .group-setting {
+  padding: 0.8rem 0.3rem;
+  margin: 0.3rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+#root .add-group-page.confirm .aside .group-settings .group-setting:first-of-type h4 {
+  display: flex;
+  flex-direction: column;
+}
+
+#root .add-group-page.confirm .aside .group-settings .group-setting:first-of-type h4 span {
+  color: rgb(159, 159, 159);
+}
+
+#root .add-group-page.confirm .aside .group-members {
+  padding: 0.8rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  color: rgb(166, 166, 166);
+}
+
+#root .add-group-page.confirm .aside .group-members span:first-child {
+  width: 100%;
+}
+
+#root .add-group-page.confirm .aside .group-members .member {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+#root .add-group-page.confirm .aside .group-members .member img {
+  width: 5rem;
+  border-radius: 50%;
+}
+
+
+/* Start Chat Homepage */
+.homepage-container.chat header {
+  justify-content: center;
+}
+
+.homepage-container.chat .left-side-and-link {
+  display: flex;
+  gap: 0.1rem;
+  width: 100%;
+}
+
+.homepage-container.chat header .left-side-and-link .icon-btn {
+  outline: none;
+}
+
+.homepage-container.chat header .left-side-and-link .chat-details {
+  display: flex;
+  gap: 0.5rem;
+  width: 100%;
+}
+
+.homepage-container.chat header .left-side-and-link .chat-details:active {
+  background-color: #151f48ad;
+}
+
+.homepage-container.chat header .left-side-and-link .chat-profile {
+  width: 45px;
+  height: 45px;
+}
+
+.homepage-container.chat header .left-side-and-link .chat-profile img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+}
+
+.homepage-container.chat header nav {
+  display: flex;
+}
+
+.nav li:first-child {
+  border-top-left-radius: 9px;
+}
+
+.nav li:last-child {
+  border-bottom-left-radius: 9px;
+}
+
+.homepage-container.chat header nav ul.nav {
+  gap: 0.3rem;
+  width: auto;
+}
+
+.homepage-container.chat header nav .nav.two {
+  width: 8rem;
+}
+
+.homepage-container.chat footer {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+}
+
+.homepage-container.chat footer .search-input {
+  width: 97%;
+  margin-left: auto;
+  border-radius: 30px;
+  position: relative;
+}
+
+.homepage-container.chat footer .search-input .input-base {
+  width: 100%;
+  border-radius: 50px;
+  padding-left: 40px;
+  border: 1px solid transparent;
+  background-color: #31374fb8;
+}
+
+.homepage-container.chat footer .search-input .camera-icon {
+  position: absolute;
+  right: 0%;
+  bottom: -9%;
+}
+
+.homepage-container.chat footer .search-input .attach-icon {
+  position: absolute;
+  right: 2.5rem;
+  top: -9%;
+}
+
+.homepage-container.chat footer .search-input .sticker-icon {
+  position: absolute;
+  left: 1%;
+  top: -9%;
+}
+
+.homepage-container.chat footer .search-input .camera-icon,
+.homepage-container.chat footer .search-input .attach-icon,
+.homepage-container.chat footer .search-input .sticker-icon,
+.send-icon {
+  color: grey;
+  border: none;
+  outline: none;
+}
+
+.homepage-container.chat footer .voice-btn,
+.homepage-container.chat footer .send-btn {
+  outline: none;
+  border-radius: 50%;
+  margin-left: 1rem;
+  background-color: #61cb15ff;
+}
+
+.homepage-container.chat footer .voice-btn .voice-icon,
+.homepage-container.chat footer .send-btn .send-icon {
+  color: #090b0f;
+}
+
+
+/* Start Chat Info */
+:root {
+  background-color: #090b0f;
+}
+
+#root .homepage-container.chat-info {
+  background-color: #090b0f;
+  display: flex;
+  flex-direction: column;
+}
+
+#root .homepage-container.chat-info .header {
+  display: flex;
+  /* position: fixed; */
+  top: 0;
+  left: 0;
+  right: 0;
+  justify-content: space-between;
+  background-color: #111a3f;
+}
+
+#root .homepage-container.chat-info .header .icon-btn {
+  display: flex;
+  outline: none;
+}
+
+#root .homepage-container.chat-info .header .icon-btn.go-back {
+  align-items: start;
+  height: 2.5rem;
+}
+
+#root .homepage-container.chat-info .header .chat-details {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  font-weight: bold;
+  margin: auto;
+}
+
+#root .homepage-container.chat-info .header .chat-details .chat-profile {
+  width: 10rem;
+  height: 10rem;
+  margin: auto;
+}
+
+#root .homepage-container.chat-info .header .chat-details .chat-profile img {
+  width: 10rem;
+  height: 10rem;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+}
+
+#root .homepage-container.chat-info .header nav {
+  position: relative;
+}
+
+#root .homepage-container.chat-info .header nav ul.nav {
+  list-style: none;
+  flex-direction: column;
+  position: absolute;
+  right: 3%;
+  width: 11rem;
+  padding: 0.5rem 0;
+  border-radius: 0.5rem;
+  background-color: #151f48;
+}
+
+#root .homepage-container.chat-info .header nav ul.nav li {
+  width: 100%;
+  cursor: pointer;
+  border-radius: 0;
+  padding: 0.7rem 0.5rem;
+}
+
+#root .homepage-container.chat-info .header nav ul.nav li:hover {
+  background-color: #444c6b;
+}
+
+#root .homepage-container.chat-info .icons {
+  width: 100%;
+  padding: 1rem 0;
+  display: flex;
+  justify-content: space-evenly;
+  background-color: #111a3f;
+}
+
+#root .homepage-container.chat-info .icons .icon-btn {
+  outline: none;
+  display: flex;
+  flex-direction: column;
+  width: 7rem;
+  padding: 1rem;
+  font-size: 1.3rem;
+  border-radius: 2rem;
+  color: white;
+  border: 1px solid #4692ee66;
+}
+
+#root .homepage-container.chat-info .icon,
+span.date,
+p {
+  color: rgb(142, 138, 138);
+}
+
+#root .homepage-container.chat-info .icons .icon-btn .icon {
+  color: rgba(0, 255, 0, 0.7);
+}
+
+#root .homepage-container.chat-info .status,
+#root .homepage-container.chat-info .group-description,
+#root .homepage-container.chat-info .media-links-docs,
+#root .homepage-container.chat-info .notification-media-visibility,
+#root .homepage-container.chat-info .encryption-and3,
+#root .homepage-container.chat-info .group-members,
+#root .homepage-container.chat-info .common-groups,
+#root .homepage-container.chat-info .phone,
+#root .homepage-container.chat-info .add-to {
+  width: 100%;
+  padding: 0;
+  margin-top: 0.4rem;
+  display: flex;
+  flex-direction: column;
+  font-weight: bold;
+  background-color: #111a3f;
+}
+
+#root .homepage-container.chat-info .media-links-docs {
+  flex-direction: row;
+  cursor: pointer;
+  border-radius: 0.2rem;
+  justify-content: space-between;
+}
+
+#root .homepage-container.chat-info .status span,
+#root .homepage-container.chat-info .group-description button,
+#root .homepage-container.chat-info .group-description p,
+#root .homepage-container.chat-info .media-links-docs span,
+.media-links-docs .icon-btn {
+  padding: 0.9rem;
+  outline: none;
+}
+
+#root .homepage-container.chat-info .notification-media-visibility div,
+#root .homepage-container.chat-info .encryption-and3 .choice-cont,
+#root .homepage-container.chat-info .group-members .group-member {
+  padding: 0.9rem;
+  border-radius: 0.2rem;
+  display: flex;
+  gap: 1rem;
+  cursor: pointer;
+}
+
+#root .homepage-container.chat-info .media-links-docs:active,
+#root .homepage-container.chat-info .notification-media-visibility div:active,
+#root .homepage-container.chat-info .encryption-and3 .choice-cont:active,
+#root .homepage-container.chat-info .group-members .group-member:active,
+#root .homepage-container.chat-info .group-members .add-members:active,
+#root .homepage-container.chat-info .common-groups .create-group-with:active {
+  background-color: #444c6b;
+}
+
+#root .homepage-container.chat-info .group-members .group-member.admin-member {
+  display: flex;
+  gap: 0;
+  justify-content: center;
+}
+
+#root .homepage-container.chat-info .group-members .group-member.admin-member .admin-content {
+  display: flex;
+  gap: 1rem;
+  width: 80%;
+}
+
+#root .homepage-container.chat-info .group-members .group-member.admin-member .admin {
+  width: 27%;
+  height: 100%;
+  display: flex;
+  align-items: start;
+  justify-content: end;
+}
+
+#root .homepage-container.chat-info .group-members .group-member.admin-member .admin span {
+  padding: 0.1rem;
+  border-radius: 0.3rem;
+  color: rgb(121, 248, 121);
+  background-color: rgba(0, 111, 0, 0.7);
+}
+
+@media(max-width: 486px) {
+  /* #root .homepage-container.chat-info .group-members .group-member.admin-member {
+    justify-content: center;
+    gap: 0;
+  } */
+
+  /* #root .homepage-container.chat-info .group-members .group-member.admin-member .admin-content {
+    gap: 0.6rem;
+  } */
+}
+
+#root .homepage-container.chat-info .encryption-and3 .choice-cont.lock-toggle {
+  justify-content: space-between;
+}
+
+#root .homepage-container.chat-info .encryption-and3 .choice-cont.lock-toggle div:first-child {
+  display: flex;
+  gap: 1rem;
+  justify-content: space-between;
+}
+
+#root .homepage-container.chat-info .encryption-and3 .choice-cont div span {
+  font-weight: bold;
+}
+
+#root .homepage-container.chat-info .group-members .members-and-search {
+  display: flex;
+  padding: 0.8rem;
+  align-items: center;
+  justify-content: space-between;
+}
+
+#root .homepage-container.chat-info .group-members .add-members {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 0.9rem;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+#root .homepage-container.chat-info .group-members .add-members .icon-btn {
+  width: 3.2rem;
+  height: 3.2rem;
+  outline: none;
+  background-color: rgba(0, 255, 0, 0.7);
+}
+
+#root .homepage-container.chat-info .group-members .add-members .icon-btn .icon {
+  color: #090b0f;
+}
+
+#root .homepage-container.chat-info .group-members .group-member .member-profile {
+  width: 3.5rem;
+  height: 3.5rem;
+}
+
+#root .homepage-container.chat-info .group-members .group-member .member-profile img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+}
+
+#root .homepage-container.chat-info .common-groups p,
+#root .homepage-container.chat-info .common-groups .create-group-with {
+  padding: 0.9rem;
+}
+
+#root .homepage-container.chat-info .common-groups .create-group-with {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  cursor: pointer;
+  gap: 1rem;
+}
+
+#root .homepage-container.chat-info .common-groups div .icon-btn {
+  outline: none;
+  background-color: rgba(0, 255, 0, 0.7);
+}
+
+#root .homepage-container.chat-info .common-groups div .icon-btn .icon {
+  color: #111a3f;
+}
+
+#root .homepage-container.chat-info .phone {
+  padding: 0.5rem;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+#root .homepage-container.chat-info .phone .spans {
+  display: flex;
+  flex-direction: column;
+}
+
+#root .homepage-container.chat-info .phone .number {
+  padding: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+#root .homepage-container.chat-info .phone .buttons {
+  display: flex;
+  align-items: end;
+}
+
+#root .homepage-container.chat-info .phone .buttons .icon-btn {
+  outline: none;
+}
+
+#root .homepage-container.chat-info .phone .buttons .icon-btn .icon {
+  color: rgba(0, 255, 0, 0.7);
+}
+
+#root .homepage-container.chat-info .add-to .icon-btn {
+  display: flex;
+  cursor: pointer;
+  gap: 1rem;
+  padding: 0.9rem;
+}
+
+#root .homepage-container.chat-info .add-to .icon-btn.danger,
+#root .homepage-container.chat-info .add-to .icon-btn.danger .icon,
+#root .homepage-container.chat-info .add-to .icon.added-to-favorite {
+  color: red;
+}
+
+
+/* Start New Account Home Page */
+.new-account header .icon-btn {
+  outline: none;
+}
+
+.new-account main {
+  margin-top: 5rem;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  height: 50vh;
+}
+
+.new-account main .animating-preview {
+  width: 100%;
+  margin-bottom: 5rem;
+}
+
+.new-account main .add-account {
+  display: flex;
+  padding: 0 1.3rem;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.new-account footer .btn {
+  width: 80%;
+  color: black;
+  font-size: 1.1rem;
+  border-radius: 20px;
+  text-transform: none;
+  margin-bottom: 0.2rem;
+  background-color: limegreen;
+}
+
+
+/* Start Add New Account */
+.addnewaccount-container {
+  width: 100%;
+  height: 100%;
+  background-color: #191f37;
+  background-image: none;
+}
+
+.addnewaccount-container header {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.addnewaccount-container header .icon-btn {
+  outline: none;
+}
+
+.addnewaccount-container main {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+}
+
+.addnewaccount-container main p {
+  color: rgb(197, 196, 196);
+}
+
+.addnewaccount-container main .input {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.addnewaccount-container main .input .text-field input {
+  color: white;
+}
+
+.addnewaccount-container main .input .text-field input:focus {
+  border-bottom: 3px solid limegreen;
+}
+
+.addnewaccount-container main .input .number {
+  display: flex;
+  gap: 0.6rem;
+}
+
+.addnewaccount-container footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  text-align: center;
+}
+
+.addnewaccount-container footer .btn {
+  width: 85%;
+  color: black;
+  font-size: 1.1rem;
+  border-radius: 20px;
+  text-transform: none;
+  margin-bottom: 0.2rem;
+}
